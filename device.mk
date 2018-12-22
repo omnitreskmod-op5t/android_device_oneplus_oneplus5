@@ -111,6 +111,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SnapdragonCamera2
 
+ifeq ($(TARGET_DEVICE),oneplus5)
+PRODUCT_COPY_FILES += \
+    device/oneplus/oneplus5/prebuilt/camlibs/op5/lib/libmmcamera_imx371.so:system/lib/libmmcamera_imx371.so \
+    device/oneplus/oneplus5/prebuilt/camlibs/op5/lib/libmmcamera_imx371.so:system/lib/libmmcamera_imx398.so \
+    device/oneplus/oneplus5/prebuilt/camlibs/op5/lib/hw/camera.msm8998.so:system/lib/hw/camera.msm8998.so
+else
+PRODUCT_COPY_FILES += \
+    device/oneplus/oneplus5/prebuilt/camlibs/op5t/lib/libmmcamera_imx371.so:system/lib/libmmcamera_imx371.so \
+    device/oneplus/oneplus5/prebuilt/camlibs/op5t/lib/libmmcamera_imx371.so:system/lib/libmmcamera_imx398.so \
+    device/oneplus/oneplus5/prebuilt/camlibs/op5t/lib/hw/camera.msm8998.so:system/lib/hw/camera.msm8998.so
+endif
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.audio.low_latency.xml \
