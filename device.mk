@@ -107,10 +107,6 @@ PRODUCT_PACKAGES += \
     libcld80211 \
     lib_driver_cmd_qcwcn
 
-# Camera
-PRODUCT_PACKAGES += \
-    SnapdragonCamera2
-
 ifeq ($(TARGET_DEVICE),oneplus5)
 PRODUCT_COPY_FILES += \
     device/oneplus/oneplus5/prebuilt/camlibs/op5/lib/libmmcamera_imx371.so:system/lib/libmmcamera_imx371.so \
