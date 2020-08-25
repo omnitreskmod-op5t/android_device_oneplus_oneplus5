@@ -1,5 +1,7 @@
 on init
+    mount none /system/lib/libmmcamera_imx350.so /vendor/lib/libmmcamera_imx350.so bind
     mount none /system/lib/libmmcamera_imx371.so /vendor/lib/libmmcamera_imx371.so bind
+    mount none /system/lib/libmmcamera_imx371.so /vendor/lib/libmmcamera_imx376k.so bind
     mount none /system/lib/libmmcamera_imx398.so /vendor/lib/libmmcamera_imx398.so bind
     mount none /system/lib/hw/camera.msm8998.so /vendor/lib/hw/camera.msm8998.so bind
     mount none /system/overlay/EmptyOverlay/EmptyOverlay.apk /vendor/overlay/FrameworksResCommon.apk bind
